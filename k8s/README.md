@@ -2,21 +2,18 @@
 
 ### Created the [Vagrantfile](./Vagrantfile) with following instances
 
-- Loadbalancer - `lb`  (TODO: Need to move the api server to this.)
 - Control Plane - `cp`
 - Worker Node 1 - `w1`
 - Worker Node 2 - `w2`
 
 The vagrant does the following:
 - Sets up the following instances with their static IP addresses:
-  - Loadbalancer (`lb`) with IP address `10.10.10.10`
   - Control Plane (`cp`) with IP address `10.10.10.11`
   - Worker Node 1 (`w1`) with IP address `10.10.10.12`
   - Worker Node 2 (`w2`) with IP address `10.10.10.13`
 - The local [`shared/dl`](./shared/dl) folder is shared mounted on all instance at `/downloads`
-- Sets up the port forwarding for the host to 6443 to instance 6443 for `cp1` and `lb` instances
+- Sets up the port forwarding for the host to 6443 to instance 6443 for `cp1`
 - Sets up the `/etc/hosts` file on each instance with the following entries:
-  - `lb` with IP address `10.10.10.10`
   - `cp` with IP address `10.10.10.11`
   - `w1` with IP address `10.10.10.12`
   - `w2` with IP address `10.10.10.13`
